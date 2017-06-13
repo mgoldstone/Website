@@ -1,0 +1,117 @@
+<html>
+<head>
+<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
+		<script src="gallery.js" type="text/javascript"></script>
+		<script type="text/javascript">
+		$(document).ready(function() {
+			var gallery = new Gallery({
+				elements: {
+					slideshow: '#slideshow',
+					currentImage: '#slideshow .current .image',
+					currentCaption: '#slideshow .current .caption',
+					thumbnailAnchor: '#gallery .thumbnails .thumbnail a',
+					previousAnchor: '#slideshow .previous a',
+					nextAnchor: '#slideshow .next a',
+					closeAnchor: '#slideshow .close a',
+				}
+			});
+		});
+		</script>
+</head>
+<body>
+
+<div class="left"> 
+  
+<div class="sidebar">
+
+<div id="sitename">
+<a href="index.html">Maggie<br>Goldstone</a><br>
+<!-- <span style="font-weight:normal;color:gray;font-size:14px;text-transform:none;">maggiegoldstone@gmail.com</span> -->
+</div>
+
+<div class="navigation">
+<ul>
+<li><a href="new.html">new paintings</a></li>
+<li><a href="old.html">old paintings</a></li>
+<li><a href="info.html">info</a></li>
+<li><a href="smile.html">:)</a></li>
+<li><p style="opacity:0;">blank</p></li>
+</ul>
+</div>
+
+</div>
+
+<div class="sidebar-bottom">
+<p>Contact:<br>maggiegoldstone@gmail.com<br>
+<a href="http://www.instagram.com/maggiegoldstone">instagram</a></p>
+</div>
+
+</div>
+
+<div class="main">
+
+				<div id="slideshow">
+				<ul class="controls">
+					<li class="control previous">
+						<a href="#" title="Previous">Previous</a>
+					</li>
+					<li class="control next">
+						<a href="#" title="Next">Next</a>
+					</li>
+					<li class="control close">
+						<a href="#" title="Close">Close</a>
+					</li>
+				</ul>
+				<div class="current">
+					<div class="image"></div>
+					<p class="caption"></p>
+				</div>
+			</div>
+			<article id="body">
+				<div id="gallery">
+					<ul class="images thumbnails">
+						<li class="even image thumbnail">
+							<a href="img/img1.jpg" title="<i>Bath</i>, 2017<br>oil on canvas<br>6 x 5ft"><img src="img/img1.jpg"></a>
+						</li>
+						<li class="odd image thumbnail">
+							<a href="img/img2.jpg" title="Kristian Karlsson"><img src="img/img2.jpg"></a>
+						</li>
+						<li class="even image thumbnail">
+							<a href="img/img3.jpg" title="Dominik Martin"><img src="img/img3.jpg"></a>
+						</li>
+
+					</ul>
+				</div>
+			</article>
+
+
+<div class="gallery1">
+<img src="img/img3.jpg"><br><br>
+<img src="img/img1.jpg"><br><br>
+<img src="img/img2.jpg"><br><br>
+
+
+</div>
+
+ </div>
+ 
+ 
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36251023-1']);
+  _gaq.push(['_setDomainName', 'jqueryscript.net']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</body>
+</html>
