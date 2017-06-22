@@ -1,29 +1,97 @@
-body{
-font-family: 
-/* 'Raleway',  */
-sans-serif;
-margin: 50px;
-background-color: #F5F5F5;
+body {
+  font-family: sans-serif;
+  margin: 50px;
+  background-color: #F5F5F5;
+} 
+
+.fixed {
+  position: relative;
 }
 
-a{
-color:#00aced;
+.flex-col-2 {
+  	  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
 }
 
-.left{
-width: 15%;
-position:fixed;
+.single-img-width {
+	width: 100%;
 }
 
+.info{
+line-height: 24px;
+font-size:14px;
+margin-left: 0px;
+}
+
+
+.navigation ul li a{
+  list-style:none;
 /* 
-.sidebar {
-  position: fixed;
-
-}
+  color: #14FF64;
  */
+  color: #999;
+  text-align: left;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 34px;
+  line-height: 65px;
+}
+
+ #sitename{
+  text-decoration: none;
+  font-weight:bold;
+  font-size: 50px;
+  text-transform: uppercase;
+}
+
+#sitename a{
+  color: magenta;
+  text-decoration: none;
+  line-height:50px;
+}
+
+@media all and (min-width:1000px) {
+    .fixed {
+      position: fixed;
+    }
+    .flex-col-2 {
+      	-ms-flex-preferred-size: 80%;
+    	flex-basis: 80%;
+    }
+    .single-img-width {
+    	width:60%;
+    }
+    .navigation ul li a{
+  		list-style:none;
+		/* 
+  		color: #14FF64;
+ 		*/
+  		color: #999;
+  		text-align: left;
+  		text-decoration: none;
+  		font-weight: bold;
+  		font-size: 14px;
+  		line-height: 28px;
+	}
+	#sitename{
+  		text-decoration: none;
+  		font-weight:bold;
+  		font-size: 28px;
+  		text-transform: uppercase;
+	}
+
+	#sitename a{
+  		color: magenta;
+  		text-decoration: none;
+  		line-height:28px;
+	}
+	.info {
+		margin-left: 30px;
+	}
+}
 
 .sidebar-bottom{
-  position: fixed;
+  position:fixed;
   bottom: 20px;
   text-align: left;
   text-decoration: none;
@@ -31,170 +99,44 @@ position:fixed;
   line-height:20px;
 }
 
-
-.main {
-width:80%;
-float: right;
+@media screen and (max-width: 1000px) {
+    .sidebar-bottom {
+        display: none !important;
+    }
+    
 }
 
 
- #sitename{
-  text-decoration: none;
-  font-weight:bold;
-  font-size: 30px;
-  text-transform: uppercase;
-}
 
-#sitename a{
-  color: magenta;
-  text-decoration: none;
-  line-height:28px;
-}
+
 #sitename a:hover{
   color: #14FF64;
   text-decoration: none;
 }
+
 .navigation ul{
-list-style:none;
-padding-left:0;
-
-}
-
-.navigation ul li a{
   list-style:none;
-  color: #14FF64;
-  text-align: left;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 16px;
-  line-height: 28px;
-/*   text-transform: uppercase; */
+  padding-left:0;
+
 }
+
+
 
 .navigation ul li a:hover{
-color:magenta;
+  color:magenta;
 }
 .navigation ul li a: selected{
-color:magenta;
+  color:magenta;
 }
-
-
-
 
 .caption-main {
-font-size:12px;
-}
-
-
-.info{
-line-height: 24px;
-}
-
-/* gallery lightbox */
-
-li { list-style: none; }
-
-
-
-#gallery .images .image, #gallery .images .image a, #gallery .images .image img {
-  height: 250px;
-  width: auto;
-}
-
-#gallery .images .image {
-  float: left;
-  margin: 0 10px 10px 0;
-}
-
-#gallery .images .image a { display: block; }
-
-#gallery .images .image img { background-color: #775295; }
-
-#gallery .images:after {
-  clear: both;
-  content: '.';
-  display: block;
-  height: 0;
-  visibility: hidden;
-}
-
-#slideshow {
-  background-color: rgba(255, 250, 250, 0.75);
-  display: none;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  width: 79%;
-}
-
-#slideshow .current .image, #slideshow .controls .previous, #slideshow .controls .next {
-  height: 500px;
-  margin: 78px 0 0;
-}
-
-#slideshow .current .image, #slideshow .current .caption { text-align: center; }
-
-#slideshow .current .caption {
-  color: black;
-  padding: 20px 0 0;
-}
-
-#slideshow .controls { position: relative; }
-
-#slideshow .controls .control { position: absolute; }
-
-#slideshow .controls .previous, #slideshow .controls .next {
-  top: 0;
-  width: 50%;
-}
-
-#slideshow .controls .previous { left: 0; }
-
-#slideshow .controls .next { right: 0; }
-
-#slideshow .controls .close {
-  height: 48px;
-  right: 0;
-  top: 0;
-  width: 62px;
-}
-
-#slideshow .controls .control a {
-  color: transparent;
-  display: block;
-}
-
-#slideshow .controls .previous a, #slideshow .controls .next a {
-  height: 500px;
-  width: auto;
-}
-
-#slideshow .controls .previous a {
-  background-image: url(img/back.png);
-  background-position: 25% center;
-  background-repeat: no-repeat;
-
-}
-
-#slideshow .controls .next a {
-  background-image: url(img/next.png);
-  background-position: 75% center;
-  background-repeat: no-repeat;
-  
-}
-
-#slideshow .controls .close a {
-  background-image: url(img/close.png);
-  background-position: 50% center;
-  background-repeat: no-repeat;
-  height: 48px;
-  width: 48px;
+  font-size:12px;
 }
 
 
 
 
-.gallery1 img{
-height:85%;
+a{
+color:#00aced;
 }
 
